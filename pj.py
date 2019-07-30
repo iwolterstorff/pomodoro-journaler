@@ -22,8 +22,10 @@ pattern = [
     Pomodoro.LONG_BREAK,
 ]
 
+
 def pom_seconds(pom):
     return pom.value * 60
+
 
 def run_pomodoro_timer(pom):
     seconds_to_count = pom_seconds(pom)
@@ -31,6 +33,7 @@ def run_pomodoro_timer(pom):
     for _ in range(seconds_to_count):
         indicator.update(1)
         sleep(1)
+
 
 if __name__ == "__main__":
     for pom in cycle(pattern):
